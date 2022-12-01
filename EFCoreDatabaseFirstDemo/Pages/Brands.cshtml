@@ -1,0 +1,24 @@
+﻿@page
+@model EFCoreDatabaseFirstDemo.Pages.BrandsModel
+@{
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Brand Id</td>
+            <td>Brand Name</td>
+            <td>Manage</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var row in Model.Brands)
+        {
+        <tr>
+            <td>@row.BrandId</td>
+            <td>@row.BrandName</td>
+            <td>Edit / Delete</td>
+        </tr>
+        }
+    </tbody>
+</table>
